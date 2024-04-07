@@ -1,0 +1,11 @@
+db_server:
+  image: postgres:latest
+  container_name: db_server
+  hostname: db_server
+  restart: unless-stopped
+  networks:
+    - tms_net
+  # volumes:
+  #   - ./db_data:/var/lib/postgresql/data
+  ports:
+    - 5432:5432
