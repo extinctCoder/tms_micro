@@ -1,4 +1,4 @@
-from tms import auth_app
+from .main import app as auth_app
 from fastapi.testclient import TestClient
 
 

@@ -1,8 +1,8 @@
-from tms import main_app
+from .main import app as user_app
 from fastapi.testclient import TestClient
 
 
-tmp_client = TestClient(main_app)
+tmp_client = TestClient(user_app)
 
 
 def test_healthcheck():
@@ -10,7 +10,7 @@ def test_healthcheck():
 
 
 def test_app():
-    assert tmp_client.get("/").json() == {"msg": "main_service"}
+    assert tmp_client.get("/").json() == {"msg": "user_service"}
 
 
 if __name__ == "__main__":
