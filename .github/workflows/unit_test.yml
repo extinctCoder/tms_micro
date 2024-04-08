@@ -1,8 +1,8 @@
 name: Run micro-sevice unitest
 
-on: push
-#   pull_request:
-#     types: [opened, synchronize]
+on:
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
   python_unitest:
