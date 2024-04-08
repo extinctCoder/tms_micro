@@ -5,7 +5,7 @@ on: push
 #     types: [opened, synchronize]
 
 jobs:
-  unitest:
+  python_unitest:
     runs-on: ubuntu-latest
     permissions:
       contents: read
