@@ -1,0 +1,12 @@
+FROM python:3.11
+
+RUN python3 -m pip install --upgrade --force-reinstall pip && python3 -m pip install pipenv
+
+WORKDIR /src
+
+COPY ./Pipfile .
+RUN pipenv lock && pipenv install --dev --ignore-pipfile --system
+
+COPY ./src/main_service .
+
+CMD ["python3", "./main.py"]

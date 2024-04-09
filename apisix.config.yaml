@@ -1,0 +1,19 @@
+routes:
+  - uri: /
+    upstream:
+      nodes:
+        "main_service:8000": 1
+      type: roundrobin
+
+  - uri: /auth
+    upstream:
+      nodes:
+        "auth_service:8000": 1
+      type: roundrobin
+
+  - uri: /user
+    upstream:
+      nodes:
+        "user_service:8000": 1
+      type: roundrobin
+#END
