@@ -26,10 +26,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker images
-        run: |
-          for service in $(ls Dockerfile.* | sed 's/Dockerfile\.//g'); do
-            IMAGE_NAME=${{ env.REGISTRY }}/${{ env.REPO_NAME }}/$service:${{ env.TAG }}
-            docker build -f Dockerfile.$service -t $IMAGE_NAME .
-            docker push $IMAGE_NAME
-          done
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .Dockerfile.main
+          push: true
+          tags: tms_macro/main:latest
