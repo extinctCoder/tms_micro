@@ -31,7 +31,7 @@ jobs:
           context: .
           file: Dockerfile.main
           push: true
-          tags: tms_macro/image2:main
+          tags: ${{ github.repository }}:main
 
       - name: Build and push Docker auth image
         uses: docker/build-push-action@v3
@@ -39,7 +39,7 @@ jobs:
           context: .
           file: Dockerfile.auth
           push: true
-          tags: tms_macro/image2:auth
+          tags: ${{ github.repository }}:auth
 
       - name: Build and push Docker user image
         uses: docker/build-push-action@v3
@@ -47,4 +47,4 @@ jobs:
           context: .
           file: Dockerfile.user
           push: true
-          tags: tms_macro/image2:user
+          tags: ${{ github.repository }}:user
