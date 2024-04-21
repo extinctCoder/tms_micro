@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main_service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: main_service
+  template:
+    metadata:
+      labels:
+        app: main_service
+    spec:
+      containers:
+        - name: main_service
+          image: main_service:latest
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: 500m
+          ports:
+            - containerPort: 8000

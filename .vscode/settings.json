@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "apisix",
+    "buildx",
     "fastapi",
     "healthcheck",
     "multinode",
