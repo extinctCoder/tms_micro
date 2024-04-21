@@ -30,21 +30,20 @@ jobs:
           context: .
           push: true
           file: Dockerfile.main
-          tags: |
-            ghcr.io/extinctcoder/tms_micro:main
+          tags: ghcr.io/extinctcoder/tms_micro:main
 
-    #   - name: Build and push Docker auth image
-    #     uses: docker/build-push-action@v3
-    #     with:
-    #       context: .
-    #       file: Dockerfile.auth
-    #       push: true
-    #       tags: extinctcoder/tms_micro:auth
+      - name: Build and push Docker auth image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile.auth
+          push: true
+          tags: ghcr.io/extinctcoder/tms_micro:auth
 
-    #   - name: Build and push Docker user image
-    #     uses: docker/build-push-action@v3
-    #     with:
-    #       context: .
-    #       file: Dockerfile.user
-    #       push: true
-    #       tags: extinctcoder/tms_micro:user
+      - name: Build and push Docker user image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile.user
+          push: true
+          tags: ghcr.io/extinctcoder/tms_micro:user
