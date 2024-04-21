@@ -29,22 +29,24 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          push: true
           file: Dockerfile.main
-          push: true
-          tags: extinctcoder/tms_micro:main
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
 
-      - name: Build and push Docker auth image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: Dockerfile.auth
-          push: true
-          tags: extinctcoder/tms_micro:auth
+    #   - name: Build and push Docker auth image
+    #     uses: docker/build-push-action@v3
+    #     with:
+    #       context: .
+    #       file: Dockerfile.auth
+    #       push: true
+    #       tags: extinctcoder/tms_micro:auth
 
-      - name: Build and push Docker user image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: Dockerfile.user
-          push: true
-          tags: extinctcoder/tms_micro:user
+    #   - name: Build and push Docker user image
+    #     uses: docker/build-push-action@v3
+    #     with:
+    #       context: .
+    #       file: Dockerfile.user
+    #       push: true
+    #       tags: extinctcoder/tms_micro:user
