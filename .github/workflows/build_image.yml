@@ -1,0 +1,41 @@
+name: Publish container images to GHCR
+
+on:
+  push:
+
+env:
+  REGISTRY: ghcr.io
+  REPO_NAME: tms_micro
+  TAG: ${{ github.sha }}
+
+jobs:
+  build-and-push-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: List Dockerfiles
+        id: list_files
+        run: |
+          DOCKERFILES=$(ls Dockerfile.* | sed 's/Dockerfile\.//g')
+          echo "DOCKERFILES=$DOCKERFILES" >> $GITHUB_ENV
+
+      - name: Build and push Docker images
+        run: |
+          for service in ${{ env.DOCKERFILES }}; do
+            IMAGE_NAME=${{ env.REGISTRY }}/${{ env.REPO_NAME }}/$service:${{ env.TAG }}
+            docker build -f Dockerfile.$service -t $IMAGE_NAME .
+            docker push $IMAGE_NAME
+          done
