@@ -31,6 +31,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
+            type=ref,event=branch
             type=sha
 
       - name: Build and push Docker main image
@@ -39,7 +40,7 @@ jobs:
           context: .
           file: Dockerfile.main
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }} zero
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker auth image
@@ -48,7 +49,7 @@ jobs:
           context: .
           file: Dockerfile.auth
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }} auth
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker user image
@@ -57,5 +58,5 @@ jobs:
           context: .
           file: Dockerfile.user
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }} user
           labels: ${{ steps.meta.outputs.labels }}
