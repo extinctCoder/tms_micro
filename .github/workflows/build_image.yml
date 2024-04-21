@@ -29,6 +29,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: ./Dockerfile.main
+          context: .
+          file: Dockerfile.main
           push: true
           tags: tms_macro/main:latest
