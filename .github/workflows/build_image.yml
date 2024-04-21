@@ -33,7 +33,7 @@ jobs:
           file: Dockerfile.main
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.repository }}:main
 
     #   - name: Build and push Docker auth image
     #     uses: docker/build-push-action@v3
