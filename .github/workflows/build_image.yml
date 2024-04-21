@@ -31,14 +31,31 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
             type=sha
 
-      - name: Build and push Docker image
+      - name: Build and push Docker main image
         uses: docker/build-push-action@v3
         with:
           context: .
           file: Dockerfile.main
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker auth image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile.auth
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Docker user image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile.user
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
