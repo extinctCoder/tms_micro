@@ -26,15 +26,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: List Dockerfiles
-        id: list_files
-        run: |
-          DOCKERFILES=$(ls Dockerfile.* | sed 's/Dockerfile\.//g')
-          echo "DOCKERFILES=$DOCKERFILES" >> $GITHUB_ENV
-
       - name: Build and push Docker images
         run: |
-          for service in ${{ env.DOCKERFILES }}; do
+          for service in $(ls Dockerfile.* | sed 's/Dockerfile\.//g'); do
             IMAGE_NAME=${{ env.REGISTRY }}/${{ env.REPO_NAME }}/$service:${{ env.TAG }}
             docker build -f Dockerfile.$service -t $IMAGE_NAME .
             docker push $IMAGE_NAME
