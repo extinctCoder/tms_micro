@@ -5,8 +5,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  REPO_NAME: tms_micro
-  TAG: ${{ github.sha }}
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push-images:
@@ -26,10 +25,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=sha
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           file: Dockerfile.main
           push: true
-          tags: tms_macro/main:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
