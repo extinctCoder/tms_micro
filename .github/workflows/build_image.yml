@@ -24,13 +24,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract short commit SHA
+        id: extract_sha
+        run: echo "::set-output name=short_sha::$(echo ${{ github.sha }} | cut -c1-7)"
+
       - name: Build and push Docker main image
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
           file: Dockerfile.main
-          tags: ghcr.io/extinctcoder/tms_micro:main-${{ github.sha }}:7
+          tags: ghcr.io/extinctcoder/tms_micro:main-${{ steps.extract_sha.outputs.short_sha }}
 
       - name: Build and push Docker auth image
         uses: docker/build-push-action@v3
@@ -38,7 +42,7 @@ jobs:
           context: .
           file: Dockerfile.auth
           push: true
-          tags: ghcr.io/extinctcoder/tms_micro:auth-${{ github.sha }}:7
+          tags: ghcr.io/extinctcoder/tms_micro:auth-${{ steps.extract_sha.outputs.short_sha }}
 
       - name: Build and push Docker user image
         uses: docker/build-push-action@v3
@@ -46,4 +50,4 @@ jobs:
           context: .
           file: Dockerfile.user
           push: true
-          tags: ghcr.io/extinctcoder/tms_micro:user-${{ github.sha }}:7
+          tags: ghcr.io/extinctcoder/tms_micro:user-${{ steps.extract_sha.outputs.short_sha }}
