@@ -34,7 +34,9 @@ jobs:
           context: .
           push: true
           file: Dockerfile.main
-          tags: ghcr.io/extinctcoder/tms_micro:main-${{ env.SHORT_SHA }}
+          tags: |
+            ghcr.io/extinctcoder/tms_micro:main
+            ghcr.io/extinctcoder/tms_micro:main-${{ env.SHORT_SHA }}
 
       - name: Build and push Docker auth image
         uses: docker/build-push-action@v3
@@ -42,7 +44,9 @@ jobs:
           context: .
           file: Dockerfile.auth
           push: true
-          tags: ghcr.io/extinctcoder/tms_micro:auth-${{ env.SHORT_SHA }}
+          tags: |
+            ghcr.io/extinctcoder/tms_micro:auth
+            ghcr.io/extinctcoder/tms_micro:auth-${{ env.SHORT_SHA }}
 
       - name: Build and push Docker user image
         uses: docker/build-push-action@v3
@@ -50,4 +54,6 @@ jobs:
           context: .
           file: Dockerfile.user
           push: true
-          tags: ghcr.io/extinctcoder/tms_micro:user-${{ env.SHORT_SHA }}
+          tags: |
+            ghcr.io/extinctcoder/tms_micro:user
+            ghcr.io/extinctcoder/tms_micro:user-${{ env.SHORT_SHA }}
