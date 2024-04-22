@@ -1,11 +1,11 @@
 name: Publish container images to GHCR
 
-on:
-  push:
-
 # on:
-#   release:
-#     types: [created]
+#   push:
+
+on:
+  release:
+    types: [created]
 
 env:
   IMAGE_NAME: ${{ github.repository }}
