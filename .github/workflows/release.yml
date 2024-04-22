@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install semantic-release
+          pip install python-semantic-release
 
       - name: Run semantic-release
         env:

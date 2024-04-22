@@ -11,6 +11,7 @@ uvicorn = {extras = ["standard"], version = "*"}
 black = "*"
 httpx = "*"
 pytest = "*"
+python-semantic-release = "*"
 
 [requires]
 python_version = "3.11"
