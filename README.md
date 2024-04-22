@@ -1,4 +1,6 @@
-# deploy
+# TMS_MICRO
+
+[![Publish container images to GHCR](https://github.com/extinctCoder/tms_micro/actions/workflows/build_image.yml/badge.svg)](https://github.com/extinctCoder/tms_micro/actions/workflows/build_image.yml)
 
 ## setup kubernetes cluster
 
