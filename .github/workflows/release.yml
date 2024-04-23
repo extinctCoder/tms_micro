@@ -48,7 +48,6 @@ name: Semantic Release
 on:
   push:
     branches:
-      - master
       - main
 
 jobs:
@@ -60,11 +59,12 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Python Semantic Release
+      - name: Releasing new version with Python semantic release
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
