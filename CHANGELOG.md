@@ -2,6 +2,13 @@
 
 
 
+## v0.0.2 (2024-04-23)
+
+### Fix
+
+* fix: semantic release configuration final update ([`fae9eda`](https://github.com/extinctCoder/tms_micro/commit/fae9eda0c19b38587b6853eb10c1143369886ebc))
+
+
 ## v0.0.1 (2024-04-23)
 
 ### Ci
