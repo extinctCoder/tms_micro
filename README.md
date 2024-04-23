@@ -45,6 +45,8 @@ docker buildx build --no-cache --file Dockerfile.user --tag user_service:latest 
 Semantic release
 
 ```sh
+
+
 semantic-release generate-config -f json
 semantic-release generate-config -f toml > pyproject.toml
 semantic-release --noop version --print
