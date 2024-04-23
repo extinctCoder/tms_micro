@@ -2,6 +2,13 @@
 
 
 
+## v0.0.3 (2024-04-23)
+
+### Fix
+
+* fix: semantic release jnk files removed ([`7349eb8`](https://github.com/extinctCoder/tms_micro/commit/7349eb8d4a82ee4f40c5cc318d47be0c53eadb73))
+
+
 ## v0.0.2 (2024-04-23)
 
 ### Fix
