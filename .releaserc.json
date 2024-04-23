@@ -25,7 +25,6 @@
       "patch_tags": ["fix", "perf"],
       "default_bump_level": 0
     },
-    "tag_format": "v{version}",
     "publish": {
       "upload_to_vcs_release": true
     }
