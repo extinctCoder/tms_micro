@@ -2,6 +2,13 @@
 
 
 
+## v0.1.0 (2024-04-26)
+
+### Feature
+
+* feat: sphinx automatic documentation integration ([`d9ebda3`](https://github.com/extinctCoder/tms_micro/commit/d9ebda3c508c42601306e3fcd799f2513f1a9ba1))
+
+
 ## v0.0.3 (2024-04-23)
 
 ### Fix
