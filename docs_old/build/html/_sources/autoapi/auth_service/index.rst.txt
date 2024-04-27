@@ -1,0 +1,16 @@
+:py:mod:`auth_service`
+======================
+
+.. py:module:: auth_service
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   main/index.rst
+   test_auth/index.rst
+
+

@@ -1,0 +1,48 @@
+:py:mod:`auth_service.main`
+===========================
+
+.. py:module:: auth_service.main
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   auth_service.main.healthcheck
+   auth_service.main.root_api
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   auth_service.main.app
+
+
+.. py:data:: app
+
+   
+
+.. py:function:: healthcheck()
+
+   Endpoint for health check.
+
+   Returns:
+       Response: A Response object with status code 200 indicating successful health check.
+
+
+.. py:function:: root_api()
+
+   Root API endpoint.
+
+   Returns:
+       dict: A dictionary with a message key indicating the auth service.
+
+

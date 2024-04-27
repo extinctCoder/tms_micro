@@ -1,0 +1,38 @@
+:py:mod:`main_service.test_main`
+================================
+
+.. py:module:: main_service.test_main
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   main_service.test_main.test_healthcheck
+   main_service.test_main.test_app
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   main_service.test_main.tmp_client
+
+
+.. py:data:: tmp_client
+
+   
+
+.. py:function:: test_healthcheck()
+
+
+.. py:function:: test_app()
+
+
