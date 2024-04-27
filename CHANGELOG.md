@@ -2,6 +2,13 @@
 
 
 
+## v0.2.1 (2024-04-27)
+
+### Fix
+
+* fix: working on automated docs ([`7db8f26`](https://github.com/extinctCoder/tms_micro/commit/7db8f26bb2a99cd03bc823243ecd2ff35c5dd8d9))
+
+
 ## v0.2.0 (2024-04-27)
 
 ### Feature
