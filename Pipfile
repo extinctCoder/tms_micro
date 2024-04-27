@@ -20,6 +20,12 @@ sphinxcontrib-mermaid = "*"
 sphinx-copybutton = "*"
 sphinx-autoapi = "*"
 mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
+mkdocstrings = {extras = ["python"], version = "*"}
+mkdocs-mermaid2-plugin = "*"
+pygments = "*"
+pymdown-extensions = "*"
 
 [requires]
 python_version = "3.11"

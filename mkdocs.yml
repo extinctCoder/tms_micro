@@ -1,1 +1,53 @@
-site_name: My Docs
+site_name: TMS Micro
+repo_name: extinctCoder/tms_micro
+repo_url: https://github.com/extinctCoder/tms_micro
+markdown_extensions:
+  - footnotes
+  - tables
+  - pymdownx.keys
+  - attr_list
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mkdocstrings
+exclude_docs: |
+  Pipfile
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Lato
+    code: Inconsolata
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
