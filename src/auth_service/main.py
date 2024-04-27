@@ -1,7 +1,10 @@
 import uvicorn
 from fastapi import FastAPI, Response
 
-app = FastAPI()
+app = FastAPI(
+    title="Auth Service",
+    description="Authentication and authorization related entrypoints of simple task management system Micro Service backend.",
+)
 
 
 @app.get("/healthcheck")

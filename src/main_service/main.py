@@ -1,22 +1,32 @@
 import uvicorn
 from fastapi import FastAPI, Response
+from utils import latest_tag
 
-app = FastAPI()
+app = FastAPI(
+    title="Main Service",
+    description="Main entrypoint of simple task management system Micro Service backend.",
+    version=latest_tag(),
+    contact={
+        "name": "Sabbir Ahmed Shourov",
+        "url": "https://www.github.com/extinctCoder",
+        "email": "write2shourov@gmail.com",
+    },
+)
 
 
-@app.get("/healthcheck")
+@app.get("/healthcheck", status_code=200, tags=["healthcheck"])
 def healthcheck():
-    """
-    Endpoint for health check.
+    """Health Check Endpoint.
 
     Returns:
-        Response: A Response object with status code 200 indicating successful health check.
+        Response: A FastAPI Response indicating the health status.
     """
-    return Response(status_code=200)
+    pass
+    # return Response(status_code=200)
 
 
-@app.get("/")
-def root_api():
+@app.get("/", tags=["service"])
+def root():
     """
     Root API endpoint.
 
@@ -41,4 +51,5 @@ if __name__ == "__main__":
         The FastAPI server will be accessible at the specified host and port.
 
     """
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+
+    uvicorn.run(app, host="0.0.0.0", port=8001)
