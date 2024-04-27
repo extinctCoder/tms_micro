@@ -2,6 +2,17 @@
 
 
 
+## v0.2.0 (2024-04-27)
+
+### Feature
+
+* feat: working on mkdocs as ([`a3a428f`](https://github.com/extinctCoder/tms_micro/commit/a3a428fa21714741ca6963ff3067b6cd2f2a7606))
+
+### Fix
+
+* fix: configured mkdocs ([`7e45324`](https://github.com/extinctCoder/tms_micro/commit/7e453242bba7d9ea0f33e6a91bfb810c7341b61f))
+
+
 ## v0.1.0 (2024-04-26)
 
 ### Feature
