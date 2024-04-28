@@ -25,6 +25,18 @@ markdown_extensions:
 plugins:
   - search
   - mkdocstrings
+  - neoteroi.mkdocsoad
+  - glightbox:
+      touchNavigation: true
+      loop: true
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      shadow: true
 exclude_docs: |
   Pipfile
 theme:

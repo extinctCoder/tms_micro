@@ -26,6 +26,7 @@
     "fieldlist",
     "fontawesome",
     "furo",
+    "glightbox",
     "healthcheck",
     "inlinehilite",
     "Lato",
@@ -35,6 +36,7 @@
     "mkdocs",
     "mkdocstrings",
     "multinode",
+    "openapi",
     "Pipfile",
     "pygments",
     "pymdownx",
@@ -46,6 +48,7 @@
     "sphinxcontrib",
     "superfences",
     "twemoji",
-    "uvicorn"
+    "uvicorn",
+    "zoomable"
   ]
 }
