@@ -2,6 +2,13 @@
 
 
 
+## v0.2.2 (2024-04-28)
+
+### Fix
+
+* fix: openapi integration with mkdocs ([`551bf3d`](https://github.com/extinctCoder/tms_micro/commit/551bf3d64860de6ce190cfd196a56d66c00ca308))
+
+
 ## v0.2.1 (2024-04-27)
 
 ### Fix
