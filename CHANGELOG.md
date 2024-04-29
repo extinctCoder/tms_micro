@@ -2,6 +2,13 @@
 
 
 
+## v0.2.3 (2024-04-29)
+
+### Fix
+
+* fix: setting up mkdocs build ([`c09691c`](https://github.com/extinctCoder/tms_micro/commit/c09691c0f66fb081b28ddae84af053fa56e4a216))
+
+
 ## v0.2.2 (2024-04-28)
 
 ### Fix
