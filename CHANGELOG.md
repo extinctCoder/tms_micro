@@ -2,6 +2,15 @@
 
 
 
+## v0.3.0 (2024-04-29)
+
+### Feature
+
+* feat: new modification is added in open api
+
+BREAKING CHANGE ([`8415e3a`](https://github.com/extinctCoder/tms_micro/commit/8415e3ad22800b433cfac075bd25972d079111eb))
+
+
 ## v0.2.4 (2024-04-29)
 
 ### Fix
