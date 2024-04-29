@@ -2,6 +2,13 @@
 
 
 
+## v0.2.4 (2024-04-29)
+
+### Fix
+
+* fix: openapi generator for main service is added ([`1609aaa`](https://github.com/extinctCoder/tms_micro/commit/1609aaa8a70d01e61a3f842deb340a925405ed43))
+
+
 ## v0.2.3 (2024-04-29)
 
 ### Fix
