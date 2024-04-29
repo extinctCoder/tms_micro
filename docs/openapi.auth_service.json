@@ -1,21 +1,20 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Main Service",
-    "description": "Main entrypoint of simple task management system Micro Service backend.",
+    "title": "Auth Service",
+    "description": "Authentication and authorization related entrypoints of simple task management system Micro Service backend.",
     "contact": {
       "name": "Sabbir Ahmed Shourov",
       "url": "https://www.github.com/extinctCoder",
       "email": "write2shourov@gmail.com"
     },
-    "version": "v0.2.1"
+    "version": "v0.2.2"
   },
   "paths": {
     "/healthcheck": {
       "get": {
-        "tags": ["healthcheck"],
         "summary": "Healthcheck",
-        "description": "Health Check Endpoint.\n\nReturns:\n    Response: A FastAPI Response indicating the health status.",
+        "description": "Endpoint for health check.\n\nReturns:\n    Response: A Response object with status code 200 indicating successful health check.",
         "operationId": "healthcheck_healthcheck_get",
         "responses": {
           "200": {
@@ -31,10 +30,9 @@
     },
     "/": {
       "get": {
-        "tags": ["service"],
-        "summary": "Root",
-        "description": "Root API endpoint.\n\nReturns:\n    dict: A dictionary with a message key indicating the main service.",
-        "operationId": "root__get",
+        "summary": "Root Api",
+        "description": "Root API endpoint.\n\nReturns:\n    dict: A dictionary with a message key indicating the auth service.",
+        "operationId": "root_api__get",
         "responses": {
           "200": {
             "description": "Successful Response",

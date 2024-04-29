@@ -8,6 +8,9 @@ markdown_extensions:
   - attr_list
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       linenums: true
@@ -25,7 +28,8 @@ markdown_extensions:
 plugins:
   - search
   - mkdocstrings
-  - neoteroi.mkdocsoad
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
   - glightbox:
       touchNavigation: true
       loop: true
@@ -71,3 +75,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra_css:
+  - assets/css/mkdocsoad_v104.css

@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI, Response
 from utils import latest_tag  # type: ignore
 
-app_title = "Main Service"
+app_title = "Main Service API"
 app_description = (
     "Main entrypoint of simple task management system Micro Service backend."
 )
@@ -27,8 +27,7 @@ def healthcheck():
     Returns:
         Response: A FastAPI Response indicating the health status.
     """
-    pass
-    # return Response(status_code=200)
+    return Response(status_code=200)
 
 
 @app.get("/", tags=["service"])
@@ -58,20 +57,4 @@ if __name__ == "__main__":
 
     """
 
-    # uvicorn.run(app, host="0.0.0.0", port=8001)
-    import json
-
-    from fastapi.openapi.utils import get_openapi
-
-    with open("openapi.json", "w") as json_file:
-        json.dump(
-            get_openapi(
-                title=app_title,
-                description=app_description,
-                version=latest_tag(),
-                contact=app_contact,
-                routes=app.routes,
-            ),
-            json_file,
-            indent=2,
-        )
+    uvicorn.run(app, host="0.0.0.0", port=8001)

@@ -1,9 +1,23 @@
 import uvicorn
 from fastapi import FastAPI, Response
+from utils import latest_tag  # type: ignore
+
+app_title = "User Service"
+app_description = (
+    "User related entrypoints of simple task management system Micro Service backend."
+)
+
+app_contact = {
+    "name": "Sabbir Ahmed Shourov",
+    "url": "https://www.github.com/extinctCoder",
+    "email": "write2shourov@gmail.com",
+}
 
 app = FastAPI(
-    title="User Service",
-    description="User related entrypoints of simple task management system Micro Service backend.",
+    title=app_title,
+    description=app_description,
+    version=latest_tag(),
+    contact=app_contact,
 )
 
 

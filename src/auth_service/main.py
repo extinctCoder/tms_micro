@@ -1,9 +1,20 @@
 import uvicorn
 from fastapi import FastAPI, Response
+from utils import latest_tag  # type: ignore
+
+app_title = "Auth Service"
+app_description = "Authentication and authorization related entrypoints of simple task management system Micro Service backend."
+app_contact = {
+    "name": "Sabbir Ahmed Shourov",
+    "url": "https://www.github.com/extinctCoder",
+    "email": "write2shourov@gmail.com",
+}
 
 app = FastAPI(
-    title="Auth Service",
-    description="Authentication and authorization related entrypoints of simple task management system Micro Service backend.",
+    title=app_title,
+    description=app_description,
+    version=latest_tag(),
+    contact=app_contact,
 )
 
 
@@ -44,4 +55,4 @@ if __name__ == "__main__":
         The FastAPI server will be accessible at the specified host and port.
 
     """
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
