@@ -10,19 +10,21 @@
     "commit_parser": "angular",
     "commit_parser_options": {
       "allowed_tags": [
+        "breaking",
+        "major",
+        "feat",
         "build",
+        "fix",
+        "bug",
         "chore",
+        "refactor",
         "ci",
         "docs",
-        "feat",
-        "fix",
-        "perf",
-        "style",
-        "refactor",
         "test"
       ],
-      "minor_tags": ["feat"],
-      "patch_tags": ["fix", "perf"],
+      "major_tags": ["breaking", "major"],
+      "minor_tags": ["feat", "build"],
+      "patch_tags": ["fix", "bug", "chore", "refactor"],
       "default_bump_level": 0
     },
     "publish": {
