@@ -51,3 +51,5 @@ semantic-release --noop version --print
 ```
 
 working
+
+trying major version
