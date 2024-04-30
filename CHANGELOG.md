@@ -2,6 +2,17 @@
 
 
 
+## v0.3.1 (2024-04-30)
+
+### Fix
+
+* fix: working on semantic release ([`ea0f05d`](https://github.com/extinctCoder/tms_micro/commit/ea0f05d85bfba906c442797911795c34b4e4aa65))
+
+### Unknown
+
+* breaking: this is a test build ([`ef23974`](https://github.com/extinctCoder/tms_micro/commit/ef23974b60638bccc490554a3cf71b31d5916ce7))
+
+
 ## v0.3.0 (2024-04-29)
 
 ### Feature
