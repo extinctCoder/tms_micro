@@ -2,6 +2,15 @@
 
 
 
+## v1.2.0 (2024-04-30)
+
+### Feature
+
+* feat: trying for version 2
+
+BRAKING CHANGE: this will change the user api ([`e0cdd0d`](https://github.com/extinctCoder/tms_micro/commit/e0cdd0dac1c9c219f34b7743028a3a1fe927698d))
+
+
 ## v1.1.0 (2024-04-30)
 
 ### Chore
