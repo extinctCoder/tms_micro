@@ -2,6 +2,19 @@
 
 
 
+## v1.0.0 (2024-04-30)
+
+### Breaking
+
+* feat: semantic release working on it
+
+BREAKING CHANGE: upgrading to new version ([`9ad248a`](https://github.com/extinctCoder/tms_micro/commit/9ad248a8ed448be3dc9ead4dd8b349844cc81290))
+
+### Unknown
+
+* breaking: test major update ([`5d754ff`](https://github.com/extinctCoder/tms_micro/commit/5d754ffdca1b9743cc3b0400b9b871372646c004))
+
+
 ## v0.3.1 (2024-04-30)
 
 ### Fix
