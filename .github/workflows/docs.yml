@@ -28,9 +28,11 @@ jobs:
           pip install pipenv
           pipenv lock && pipenv install --system --deploy && pipenv install --dev --system --deploy
 
-      - name: Extract the latest tag
+      - name: Get the latest tag
         id: latest_tag
-        run: echo "LATEST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+        uses: WyriHaximus/github-action-get-previous-tag@v1
+        with:
+          fallback: 0.0.0
 
       - name: Generate the api specification
         id: api_specification
@@ -45,5 +47,5 @@ jobs:
         id: commit_changes
         with:
           commit_message: |
-            docs: api spec generation based on ${{ env.LATEST_TAG }}
+            docs: api spec generation based on ${{ steps.semvers.outputs.patch }}
           branch: main
