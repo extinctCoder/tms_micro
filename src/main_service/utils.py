@@ -14,11 +14,13 @@ def latest_tag():
         str or None: The latest Git tag if found, None otherwise.
     """
     try:
-        return (
+        tag = (
             subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"])
             .decode()
             .strip()
         )
+        print("latest_tag".format(tag))
+        return tag
 
     except subprocess.CalledProcessError:
         return "v0.0.0"
