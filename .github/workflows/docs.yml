@@ -1,4 +1,4 @@
-name: Automated API Specification generation
+name: Automated API Spec GEN
 
 on:
   push:
@@ -6,6 +6,9 @@ on:
 jobs:
   generate_api_spec:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code repository
@@ -36,6 +39,7 @@ jobs:
           cd ../main_service && python openapi_doc.py
           cd ../user_service && python openapi_doc.py
           cd ../..
+
       - name: Commit the generaed changes
         uses: stefanzweifel/git-auto-commit-action@v5
         id: commit_changes
