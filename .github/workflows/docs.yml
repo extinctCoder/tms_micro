@@ -45,5 +45,5 @@ jobs:
         id: commit_changes
         with:
           commit_message: |
-            docs: api spec generation based on ${{ env.SHORT_SHA }}
+            docs: api spec generation based on ${{ env.LATEST_TAG }}
           branch: main
