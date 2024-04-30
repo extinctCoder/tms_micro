@@ -1,27 +1,8 @@
 import json
-import subprocess
-from os import path
+from os import environ, path
 from pathlib import Path
 
 from fastapi.openapi.utils import get_openapi
-
-
-def latest_tag():
-    """
-    Fetches the latest Git tag of the current project.
-
-    Returns:
-        str or None: The latest Git tag if found, None otherwise.
-    """
-    try:
-        return (
-            subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"])
-            .decode()
-            .strip()
-        )
-
-    except subprocess.CalledProcessError:
-        return "v0.0.0"
 
 
 def api_doc(app, app_title, app_description, app_contact):
@@ -35,7 +16,7 @@ def api_doc(app, app_title, app_description, app_contact):
             get_openapi(
                 title=app_title,
                 description=app_description,
-                version=latest_tag(),
+                version=environ.get("LATEST_TAG", "v0.0.0"),
                 contact=app_contact,
                 routes=app.routes,
             ),
@@ -45,4 +26,4 @@ def api_doc(app, app_title, app_description, app_contact):
 
 
 if __name__ == "__main__":
-    print(latest_tag())
+    print("Latest TAG is : {}".format(environ.get("LATEST_TAG", "v0.0.0")))
