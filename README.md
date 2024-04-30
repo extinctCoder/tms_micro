@@ -50,4 +50,4 @@ semantic-release generate-config -f toml > pyproject.toml
 semantic-release --noop version --print
 ```
 
-ok raifat vai upgrading to version 2
+ok raifat vai upgrading to version 2 try again
