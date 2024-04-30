@@ -24,6 +24,10 @@ def latest_tag():
 
     except subprocess.CalledProcessError:
         print("got error")
+        import os
+
+        print(os.environ.get("LATEST_TAG"))
+
         return "v0.0.0"
 
 
