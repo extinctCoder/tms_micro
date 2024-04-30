@@ -2,6 +2,23 @@
 
 
 
+## v1.1.0 (2024-04-30)
+
+### Chore
+
+* chore: new release
+
+BRAKING CHANGE: version 2 is upgraded ([`014d8c0`](https://github.com/extinctCoder/tms_micro/commit/014d8c03480a49032b1616912fc02e2d0774060d))
+
+### Documentation
+
+* docs: new documentation added ([`ffbb823`](https://github.com/extinctCoder/tms_micro/commit/ffbb82399923f5ba8d06b07b6af4934ec39a7ec5))
+
+### Feature
+
+* feat: new try ([`e4375bb`](https://github.com/extinctCoder/tms_micro/commit/e4375bbc7a2ee65e88a0a2e25452faf7e80ff6bc))
+
+
 ## v1.0.0 (2024-04-30)
 
 ### Breaking
