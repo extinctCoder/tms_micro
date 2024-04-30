@@ -49,7 +49,3 @@ semantic-release generate-config -f json
 semantic-release generate-config -f toml > pyproject.toml
 semantic-release --noop version --print
 ```
-
-working
-
-trying major version
