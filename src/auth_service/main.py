@@ -1,6 +1,7 @@
+from os import environ
+
 import uvicorn
 from fastapi import FastAPI, Response
-from utils import latest_tag  # type: ignore
 
 app_title = "Auth Service"
 app_description = "Authentication and authorization related entrypoints of simple task management system Micro Service backend."
@@ -13,7 +14,7 @@ app_contact = {
 app = FastAPI(
     title=app_title,
     description=app_description,
-    version=latest_tag(),
+    version=environ.get("LATEST_TAG", "v0.0.0"),
     contact=app_contact,
 )
 

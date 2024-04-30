@@ -1,6 +1,7 @@
+from os import environ
+
 import uvicorn
 from fastapi import FastAPI, Response
-from utils import latest_tag  # type: ignore
 
 app_title = "Main Service API"
 app_description = (
@@ -15,7 +16,7 @@ app_contact = {
 app = FastAPI(
     title=app_title,
     description=app_description,
-    version=latest_tag(),
+    version=environ.get("LATEST_TAG", "v0.0.0"),
     contact=app_contact,
 )
 
