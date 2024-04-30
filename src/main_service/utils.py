@@ -23,6 +23,7 @@ def latest_tag():
         return tag
 
     except subprocess.CalledProcessError:
+        print("got error")
         return "v0.0.0"
 
 
