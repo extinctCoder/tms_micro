@@ -24,7 +24,7 @@ jobs:
       - name: Install the required python modules
         id: module_installation
         run: |
-          python -m pip install --upgrade pip &&  pip install pipenv && pipenv lock && pipenv install --system --deploy && pipenv install --dev --system --deploy
+          python -m pip install --upgrade pip &&  pip install pipenv && pipenv lock && pipenv install --system --deploy && pipenv install --dev --system --deploy && pipenv graph
 
       - name: Get the latest tag
         id: latest_tag
@@ -35,10 +35,7 @@ jobs:
       - name: Generate the api specification
         id: api_specification
         run: |
-          cd src/auth_service && python openapi_doc.py
-          cd ../main_service && python openapi_doc.py
-          cd ../user_service && python openapi_doc.py
-          cd ../..
+          cd src/auth_service && python openapi_doc.py && cd ../main_service && python openapi_doc.py && cd ../user_service && python openapi_doc.py && cd ../..
 
       - name: Commit the generaed changes
         uses: stefanzweifel/git-auto-commit-action@v5
