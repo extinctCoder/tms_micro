@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  generate_api_spec:
+  GenerateApiSpec:
     runs-on: ubuntu-latest
 
     permissions:
