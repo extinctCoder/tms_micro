@@ -6,6 +6,11 @@ name: Run micro-sevice unitest
 on:
   push:
 
+permissions:
+  contents: write
+  checks: write
+  pull-requests: write
+
 jobs:
   python_unitest:
     runs-on: ubuntu-latest
@@ -33,7 +38,7 @@ jobs:
         run: |
           pytest --cov --junitxml=pytest.xml  --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
 
-      - name: Pytest coverage comment
+      - name: Comment coverage report
         id: coverage_report
         uses: MishaKav/pytest-coverage-comment@main
         with:
