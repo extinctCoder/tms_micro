@@ -1,4 +1,4 @@
-name: Run micro-sevice unitest
+name: Automated MicroSerice Unit TEST
 
 on:
   pull_request:
