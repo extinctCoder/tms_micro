@@ -46,7 +46,7 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:main
             ghcr.io/extinctcoder/tms_micro:main-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:main-${{ steps.latest_tag.outputs.latestTag }}"
+            ghcr.io/extinctcoder/tms_micro:main-${{ steps.latest_tag.outputs.latestTag }}
 
       - name: Build and push Docker auth image
         id: build_push_auth_service
@@ -58,7 +58,7 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:auth
             ghcr.io/extinctcoder/tms_micro:auth-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:auth-${{ steps.latest_tag.outputs.latestTag }}"
+            ghcr.io/extinctcoder/tms_micro:auth-${{ steps.latest_tag.outputs.latestTag }}
 
       - name: Build and push Docker user image
         id: build_push_user_service
@@ -70,4 +70,4 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:user
             ghcr.io/extinctcoder/tms_micro:user-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:user-${{ steps.latest_tag.outputs.latestTag }}"
+            ghcr.io/extinctcoder/tms_micro:user-${{ steps.latest_tag.outputs.latestTag }}
