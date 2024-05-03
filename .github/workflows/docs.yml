@@ -1,7 +1,5 @@
 name: API Spec & Document Deploy
 
-# on:
-#   push:
 on:
   workflow_run:
     workflows: ["Automated version release Schedule"]
@@ -29,12 +27,13 @@ jobs:
       - name: Install the required python modules
         id: module_installation
         run: |
-          python -m pip install --upgrade pip &&  pip install pipenv && pipenv lock && pipenv install --system --deploy && pipenv install --dev --system --deploy
+          python -m pip install --upgrade pip && pip install pipenv && pipenv lock && pipenv install --system --deploy && pipenv install --dev --system --deploy
       - name: Get the latest tag
         id: latest_tag
         uses: JinoArch/get-latest-tag@latest
 
       - name: Set latest tag in environment variable
+        id: set_tag
         run: echo "LATEST_TAG=${{ steps.latest_tag.outputs.latestTag }}" >> $GITHUB_ENV
 
       - name: Generate the api specification

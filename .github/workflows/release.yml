@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release:
+  ScheduledRelease:
     runs-on: ubuntu-latest
     concurrency: release
     permissions:

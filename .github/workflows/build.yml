@@ -1,27 +1,27 @@
 name: Publish container images to GHCR
 
-# on:
-#   push:
-
 on:
-  release:
-    types: [created]
+  workflow_run:
+    workflows: ["Automated version release Schedule"]
+    types:
+      - completed
 
 env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-push-images:
+  PushBuildImageGHCR:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code repository
+        id: code_checkout
         uses: actions/checkout@v4
 
-      - name: Log in to the Container registry
+      - name: Log in Github Container registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -32,7 +32,12 @@ jobs:
         id: extract_sha
         run: echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
 
+      - name: Get the latest tag
+        id: latest_tag
+        uses: JinoArch/get-latest-tag@latest
+
       - name: Build and push Docker main image
+        id: build_push_main_service
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -41,9 +46,10 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:main
             ghcr.io/extinctcoder/tms_micro:main-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:main-${{ github.event.release.tag_name }}
+            ghcr.io/extinctcoder/tms_micro:main-${{ steps.latest_tag.outputs.latestTag }}"
 
       - name: Build and push Docker auth image
+        id: build_push_auth_service
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -52,9 +58,10 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:auth
             ghcr.io/extinctcoder/tms_micro:auth-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:auth-${{ github.event.release.tag_name }}
+            ghcr.io/extinctcoder/tms_micro:auth-${{ steps.latest_tag.outputs.latestTag }}"
 
       - name: Build and push Docker user image
+        id: build_push_user_service
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -63,4 +70,4 @@ jobs:
           tags: |
             ghcr.io/extinctcoder/tms_micro:user
             ghcr.io/extinctcoder/tms_micro:user-${{ env.SHORT_SHA }}
-            ghcr.io/extinctcoder/tms_micro:user-${{ github.event.release.tag_name }}
+            ghcr.io/extinctcoder/tms_micro:user-${{ steps.latest_tag.outputs.latestTag }}"
