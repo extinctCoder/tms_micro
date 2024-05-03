@@ -7,7 +7,7 @@ on:
   push:
 
 jobs:
-  python_unitest:
+  AutomatedPyTest:
     runs-on: ubuntu-latest
     permissions:
       contents: write
