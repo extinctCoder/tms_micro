@@ -2,6 +2,17 @@
 
 
 
+## v2.0.4 (2024-05-03)
+
+### Documentation
+
+* docs: api spec generation based on v2.0.3 ([`96491d6`](https://github.com/extinctCoder/tms_micro/commit/96491d6681a1b6d4835d7fa8e7a5bf20d80c0b3d))
+
+### Fix
+
+* fix: updating GHCR auto deploy ([`9999326`](https://github.com/extinctCoder/tms_micro/commit/99993263e0f41f4a7fce20df61ea98740a408622))
+
+
 ## v2.0.3 (2024-05-03)
 
 ### Documentation
