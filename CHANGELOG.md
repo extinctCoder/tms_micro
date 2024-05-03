@@ -2,6 +2,17 @@
 
 
 
+## v2.0.2 (2024-05-03)
+
+### Documentation
+
+* docs: api spec generation based on v2.0.1 ([`d4a1183`](https://github.com/extinctCoder/tms_micro/commit/d4a118366e295d53abb8dd9dc8166250258ac331))
+
+### Fix
+
+* fix: working on version fixing ([`7adb871`](https://github.com/extinctCoder/tms_micro/commit/7adb8714e166e01bc75636a14a499a8f298319a6))
+
+
 ## v2.0.1 (2024-05-03)
 
 ### Ci
