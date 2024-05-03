@@ -31,4 +31,11 @@ jobs:
       - name: Run unit tests on the test server
         id: run_pytest
         run: |
-          pytest
+          pytest --cov --junitxml=pytest.xml  --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
+
+      - name: Pytest coverage comment
+        id: coverage_report
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml

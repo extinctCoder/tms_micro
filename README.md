@@ -51,3 +51,11 @@ semantic-release --noop version --print
 ```
 
 ok raifat vai upgrading to version 2 again
+
+## pytest command
+
+```sh
+pytest --cov --junitxml=pytest.xml  --cov-report=term-missing:skip-covered
+
+pytest --cov --junitxml=pytest.xml  --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
+```

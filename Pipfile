@@ -18,6 +18,8 @@ mkdocstrings = {extras = ["python"], version = "*"}
 pymdown-extensions = "*"
 mkdocs-glightbox = "*"
 neoteroi-mkdocs = "*"
+pytest-cov = "*"
+anyio = "*"
 
 [requires]
 python_version = "3.11"
