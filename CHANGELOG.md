@@ -2,6 +2,23 @@
 
 
 
+## v3.0.1 (2024-05-03)
+
+### Documentation
+
+* docs: api spec generation based on v3.0.0 ([`08141b9`](https://github.com/extinctCoder/tms_micro/commit/08141b971291ade8acaa14f9ba9033932cb6536b))
+
+### Fix
+
+* fix: docs updated ([`9603b87`](https://github.com/extinctCoder/tms_micro/commit/9603b871ced6420b68d467edfeb94b484f00607d))
+
+### Unknown
+
+* Merge pull request #6 from extinctCoder/dev
+
+fix: docs updated ([`c2e3480`](https://github.com/extinctCoder/tms_micro/commit/c2e348047ecafa6bc67b123b5bf86f8e6c87e618))
+
+
 ## v3.0.0 (2024-05-03)
 
 ### Breaking
