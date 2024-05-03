@@ -2,6 +2,65 @@
 
 
 
+## v2.0.1 (2024-05-03)
+
+### Ci
+
+* ci: new test ([`0828066`](https://github.com/extinctCoder/tms_micro/commit/0828066258e276608f6c8dd2f2895f7487582733))
+
+* ci: new update ([`fc5de10`](https://github.com/extinctCoder/tms_micro/commit/fc5de10c6134f4d7b56a47a878f8a15514baee07))
+
+* ci: automated Test ([`766681a`](https://github.com/extinctCoder/tms_micro/commit/766681a57b1290b83407b7dcb01367c06c4b0106))
+
+* ci: new commit ([`9fa56fa`](https://github.com/extinctCoder/tms_micro/commit/9fa56fab65e6f1a88fa247b2f16f7822bb4935a6))
+
+* ci: new test ([`381b796`](https://github.com/extinctCoder/tms_micro/commit/381b7961ac1e68e6da90d3414d7fcf192e9f1654))
+
+* ci: github api spec ([`b065108`](https://github.com/extinctCoder/tms_micro/commit/b0651089755945b2e1da4093a3305556578c436a))
+
+* ci: auto commit msg publishing process ([`a064042`](https://github.com/extinctCoder/tms_micro/commit/a06404270f9dc3a8730a6b576a618631800d4e29))
+
+### Documentation
+
+* docs: automated github deployment ([`43525f9`](https://github.com/extinctCoder/tms_micro/commit/43525f92bec8e47258acb2bbae9cb21162b30611))
+
+* docs: automate docs deployment ([`4a09772`](https://github.com/extinctCoder/tms_micro/commit/4a0977281319bb2d0b39de681fb98eb6518b9a8f))
+
+* docs: mkdocs automated deployment ([`4aa79b2`](https://github.com/extinctCoder/tms_micro/commit/4aa79b2bb9621a20ec70c4200673b9556ce6c599))
+
+* docs: api spec generation based on v2.0.0 ([`055cc2f`](https://github.com/extinctCoder/tms_micro/commit/055cc2fbbd3e1f9371ed2b3e2b7e675f3e707697))
+
+* docs: api spec generation based on v2.0.0 ([`b0f1874`](https://github.com/extinctCoder/tms_micro/commit/b0f1874dc5116be3408d195c1ffdd97fc5721041))
+
+* docs: api spec generation based on ([`fc60c40`](https://github.com/extinctCoder/tms_micro/commit/fc60c40b47d3903a494926b35dd2b9f80657ccb2))
+
+### Fix
+
+* fix: new release modifications are added ([`cff30a7`](https://github.com/extinctCoder/tms_micro/commit/cff30a7c03d8fe3231ea8cb953d019b1013403c2))
+
+### Test
+
+* test: new horizen ([`a48c8bb`](https://github.com/extinctCoder/tms_micro/commit/a48c8bbedbd88712f100a7a70fb79b08c1d6027d))
+
+* test: new build on horizen ([`cbef881`](https://github.com/extinctCoder/tms_micro/commit/cbef8813f605712c460739c1617b12eac42b89d4))
+
+* test:  new tag issue ([`1ca35de`](https://github.com/extinctCoder/tms_micro/commit/1ca35de5eb8eb623b1aee754bfc64ee88348fdd4))
+
+* test: automated api test ([`c58f3e0`](https://github.com/extinctCoder/tms_micro/commit/c58f3e0b27c4a84dc476ecb1b5c57350635b2bb6))
+
+* test: test ([`b3872dd`](https://github.com/extinctCoder/tms_micro/commit/b3872dda995a275aa2b1c9fa5aa6f1d9bb3519e4))
+
+* test: test deployment ([`7729c8c`](https://github.com/extinctCoder/tms_micro/commit/7729c8c53fc7f6b8d353e234c4e10a804f652972))
+
+* test: automated api spec generation ([`dc61854`](https://github.com/extinctCoder/tms_micro/commit/dc61854638cf81455f26c9956bc0d5334875bb32))
+
+* test: auto api spec generation ([`d656950`](https://github.com/extinctCoder/tms_micro/commit/d6569507fec28d21259dfb161c9ccc730bd718f3))
+
+### Unknown
+
+* asdklfjjadjasdjkl ([`b9e68d0`](https://github.com/extinctCoder/tms_micro/commit/b9e68d0923c7acbe63d846c9df234435f035130f))
+
+
 ## v2.0.0 (2024-04-30)
 
 ### Breaking
