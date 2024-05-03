@@ -1,4 +1,4 @@
-name: Automated API Spec & Document Deploy
+name: API Spec & Document Deploy
 
 on:
   push:
@@ -49,6 +49,8 @@ jobs:
 
     permissions:
       contents: write
+
+    needs: GenerateApiSpec
 
     steps:
       - name: Checkout code repository
