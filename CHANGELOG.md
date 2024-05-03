@@ -2,6 +2,55 @@
 
 
 
+## v2.1.0 (2024-05-03)
+
+### Documentation
+
+* docs: api spec generation based on v2.0.4 ([`3ee35c8`](https://github.com/extinctCoder/tms_micro/commit/3ee35c893a01d88024193ba4765435debfc57778))
+
+### Feature
+
+* feat: new automated system is integrated ([`3f66934`](https://github.com/extinctCoder/tms_micro/commit/3f669343cf4e5efbe1cd7375255349cd8434d595))
+
+### Fix
+
+* fix: working on automated process ([`453b604`](https://github.com/extinctCoder/tms_micro/commit/453b6042ce1e350cf7ce1ae07f7c48237c63264a))
+
+* fix: CI/CD automated pipeline is close to finished ([`3259d60`](https://github.com/extinctCoder/tms_micro/commit/3259d6015fc0f4d53ddf8c9b0dc66ccd4ad707c3))
+
+### Test
+
+* test: trail github action ([`0a7380c`](https://github.com/extinctCoder/tms_micro/commit/0a7380ccaa1983e21f96bc66917ded48c8add781))
+
+* test: test branch code is uploaded ([`edb66fb`](https://github.com/extinctCoder/tms_micro/commit/edb66fb3578f1c560cbc88e070f678f7476c9347))
+
+* test: pytest comment coverage ([`50bd42a`](https://github.com/extinctCoder/tms_micro/commit/50bd42af16792cc757e971081f2117c38c203652))
+
+* test: working on auto report showing ([`cbf21b8`](https://github.com/extinctCoder/tms_micro/commit/cbf21b842711fc2cba6edd36f43f830fc2ca178c))
+
+* test: working on test report ([`7166c9d`](https://github.com/extinctCoder/tms_micro/commit/7166c9d21d58dea59ec95dc095fc4d6b4f212f77))
+
+* test: testing unit test ([`802d2e1`](https://github.com/extinctCoder/tms_micro/commit/802d2e1e5e9771b108f44f432c2c88c220458e0a))
+
+### Unknown
+
+* Merge pull request #4 from extinctCoder/dev
+
+fix: working on automated process ([`720b8dc`](https://github.com/extinctCoder/tms_micro/commit/720b8dca5b0209869dd2eb6bec987fc36aecfc7c))
+
+* Merge pull request #3 from extinctCoder/dev
+
+feat: new automated system is integrated ([`f4e26fd`](https://github.com/extinctCoder/tms_micro/commit/f4e26fdc94159bb2e4816b5460e26dab706ddc3c))
+
+* Merge pull request #2 from extinctCoder/dev
+
+fix: CI/CD automated pipeline is close to finished ([`b6b85c8`](https://github.com/extinctCoder/tms_micro/commit/b6b85c8e7322e3350cfab45aaf9e081b630b4cc3))
+
+* Merge pull request #1 from extinctCoder/dev
+
+test: trail github action ([`ddea1d5`](https://github.com/extinctCoder/tms_micro/commit/ddea1d5a354cd4618ad194165ba154c9cc245f7b))
+
+
 ## v2.0.4 (2024-05-03)
 
 ### Documentation
