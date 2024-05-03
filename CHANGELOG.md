@@ -2,6 +2,21 @@
 
 
 
+## v3.0.0 (2024-05-03)
+
+### Breaking
+
+* feat: auth service issue
+
+BREAKING CHANGE: this version changes everything start of a new era ([`95c6588`](https://github.com/extinctCoder/tms_micro/commit/95c65880bd2b0b4bb823cfd1d5ae090889c6f5cf))
+
+### Unknown
+
+* Merge pull request #5 from extinctCoder/dev
+
+feat: auth service issue ([`b51cb75`](https://github.com/extinctCoder/tms_micro/commit/b51cb75a0bf4196ebb45d81bc61d9398ea7fb858))
+
+
 ## v2.1.0 (2024-05-03)
 
 ### Documentation
