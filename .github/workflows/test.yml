@@ -6,16 +6,13 @@ name: Run micro-sevice unitest
 on:
   push:
 
-permissions:
-  contents: write
-  checks: write
-  pull-requests: write
-
 jobs:
   python_unitest:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      checks: write
+      pull-requests: write
 
     steps:
       - name: Checkout code repository
