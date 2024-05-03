@@ -1,7 +1,12 @@
 name: API Spec & Document Deploy
 
+# on:
+#   push:
 on:
-  push:
+  workflow_run:
+    workflows: ["Automated version release Schedule"]
+    types:
+      - completed
 
 jobs:
   GenerateApiSpec:

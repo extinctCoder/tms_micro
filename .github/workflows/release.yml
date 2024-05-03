@@ -1,4 +1,4 @@
-name: Semantic Release
+name: Automated version release Schedule
 
 on:
   push:
@@ -14,12 +14,14 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code repository
+        id: code_checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Releasing new version with Python semantic release
+        id: release_version
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
