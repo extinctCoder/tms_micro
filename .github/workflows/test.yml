@@ -1,4 +1,4 @@
-name: Automated MicroSerice Unit TEST
+name: Automated MicroService Unit TEST
 
 on:
   pull_request:
